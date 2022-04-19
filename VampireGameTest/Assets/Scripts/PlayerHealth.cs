@@ -6,6 +6,7 @@ using TMPro;
 public class PlayerHealth : MonoBehaviour
 {
     public TextMeshProUGUI exposureLevel;
+    public GameObject spawn;
     public float exposureNum;
 
     // Start is called before the first frame update
@@ -21,8 +22,9 @@ public class PlayerHealth : MonoBehaviour
 
         if (exposureNum > 1000)
         {
-            Destroy(this);
+            KillPlayer();
         }
+
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -31,5 +33,19 @@ public class PlayerHealth : MonoBehaviour
         {
             exposureNum++;
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "KillArea")
+        {
+            KillPlayer();
+        }
+    }
+
+    private void KillPlayer()
+    {
+        //Destroy(gameObject);
+        this.transform.position = spawn.transform.position;
     }
 }
