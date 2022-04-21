@@ -8,7 +8,7 @@ public class PlayerHealth : MonoBehaviour
     public TextMeshProUGUI exposureLevel;
     public GameObject spawn;
     public float exposureNum;
-
+    public AudioSource exposedLight;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,6 +40,17 @@ public class PlayerHealth : MonoBehaviour
         if (collision.gameObject.tag == "KillArea")
         {
             KillPlayer();
+        }
+        if(collision.gameObject.tag == "Light")
+        {
+            exposedLight.Play();
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Light")
+        {
+            exposedLight.Pause();
         }
     }
 
