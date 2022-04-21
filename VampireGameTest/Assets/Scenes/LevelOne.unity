@@ -320,7 +320,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 11
   m_Sprite: {fileID: 2068323927152135106, guid: e5db28a89762dd94a89b9352b6c0d701, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -817,8 +817,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 1383588328}
     m_Modifications:
     - target: {fileID: 515921726491060143, guid: b47356b90287b944d80cb01701ce4819, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 515921726491060143, guid: b47356b90287b944d80cb01701ce4819, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 515921726491060143, guid: b47356b90287b944d80cb01701ce4819, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 515921726491060143, guid: b47356b90287b944d80cb01701ce4819, type: 3}
       propertyPath: m_SortingOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 6138293576335760429, guid: b47356b90287b944d80cb01701ce4819, type: 3}
       propertyPath: m_Name
@@ -1283,6 +1295,7 @@ GameObject:
   m_Component:
   - component: {fileID: 731918005}
   - component: {fileID: 731918004}
+  - component: {fileID: 731918006}
   m_Layer: 0
   m_Name: Plant
   m_TagString: Untagged
@@ -1355,6 +1368,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!68 &731918006
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731918003}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.25962615, y: 0.8478482}
+  - {x: 0.72923136, y: 0.85530424}
+  - {x: 1.0210057, y: -0.9008801}
+  - {x: 0.17027313, y: -1.0564473}
+  - {x: -0.33745, y: 0.8717308}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &749858943
 GameObject:
   m_ObjectHideFlags: 0
@@ -3117,7 +3155,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.009814262, y: 0}
+  m_Offset: {x: -0.009814262, y: -0.039343614}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3128,7 +3166,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.9703712, y: 0.4}
+  m_Size: {x: 2.9703712, y: 0.32131276}
   m_EdgeRadius: 0
 --- !u!1 &2064694821
 GameObject:
