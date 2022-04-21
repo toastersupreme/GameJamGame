@@ -259,7 +259,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Sound---- Qingcheng Lin
+  m_Text: Sound---- Kelly Lin
 --- !u!222 &149359896
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -580,7 +580,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Designer---- Lok Hin Lai
+  m_Text: Designer---- Anson Lai
 --- !u!222 &889745741
 CanvasRenderer:
   m_ObjectHideFlags: 0

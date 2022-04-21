@@ -21,6 +21,8 @@ public class PlayerMovement : MonoBehaviour
 	public Transform groundCheck;
 	public float jumpHeight;
 
+	public AudioSource jumpSound;
+
 
 	// Use this for initialization
 	void Start()
@@ -36,8 +38,11 @@ public class PlayerMovement : MonoBehaviour
 		if (canMove && grounded && Input.GetAxis("Jump") > 0)
 		{
 			myAnim.SetBool("isGrounded", false);
+			jumpSound.Play();
 			myRB.velocity = new Vector2(myRB.velocity.x, 0f);
 			myRB.AddForce(new Vector2(0, jumpHeight), ForceMode2D.Impulse);
+
+			
 			grounded = false;
 		}
 
