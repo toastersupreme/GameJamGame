@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
 	public bool canMove = true;
 
 	Rigidbody2D myRB;
-	Animator myAnim;
+	//Animator myAnim;
 	SpriteRenderer myRenderer;
 
 	//for jumping 
