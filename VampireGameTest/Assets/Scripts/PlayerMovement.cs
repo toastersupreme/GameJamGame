@@ -10,8 +10,9 @@ public class PlayerMovement : MonoBehaviour
 	public bool canMove = true;
 
 	Rigidbody2D myRB;
-	//Animator myAnim;
+	Animator myAnim;
 	SpriteRenderer myRenderer;
+	public Collider2D boxPush;
 
 	//for jumping 
 	bool grounded = false;
@@ -25,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
 	void Start()
 	{
 		myRB = GetComponent<Rigidbody2D>();
-		//myAnim = GetComponent<Animator>();
+		myAnim = GetComponent<Animator>();
 		myRenderer = GetComponent<SpriteRenderer>();
 	}
 
@@ -34,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
 	{
 		if (canMove && grounded && Input.GetAxis("Jump") > 0)
 		{
-			//myAnim.SetBool("isGrounded", false);
+			myAnim.SetBool("isGrounded", false);
 			myRB.velocity = new Vector2(myRB.velocity.x, 0f);
 			myRB.AddForce(new Vector2(0, jumpHeight), ForceMode2D.Impulse);
 			grounded = false;
@@ -42,10 +43,10 @@ public class PlayerMovement : MonoBehaviour
 
 		//check if grounded
 		grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
-		//myAnim.SetBool("isGrounded", grounded);
+		myAnim.SetBool("isGrounded", grounded);
 
 		//jumping code
-		//myAnim.SetFloat("verticalVelocity", myRB.velocity.y);
+		myAnim.SetFloat("verticalVelocity", myRB.velocity.y);
 
 
 		//running code
@@ -58,13 +59,15 @@ public class PlayerMovement : MonoBehaviour
 
 
 			myRB.velocity = new Vector2(move * maxSpeed, myRB.velocity.y);
-			//myAnim.SetFloat("moveVelocity", Mathf.Abs(move));
+			myAnim.SetFloat("moveVelocity", Mathf.Abs(move));
 		}
 		else
 		{
 			myRB.velocity = new Vector2(0, myRB.velocity.y);
-			//myAnim.SetFloat("moveVelocity", 0);
+			myAnim.SetFloat("moveVelocity", 0);
 		}
+
+		
 	}
 
 
@@ -72,7 +75,7 @@ public class PlayerMovement : MonoBehaviour
 	void Flip()
 	{
 		facingRight = !facingRight;
-		myRenderer.flipX = !myRenderer.flipX;
+		//myRenderer.flipX = !myRenderer.flipX;
 		transform.Rotate(new Vector3(0, 180, 0));
 	}
 
@@ -89,5 +92,21 @@ public class PlayerMovement : MonoBehaviour
 	public void increaseSpeed()
 	{
 		maxSpeed *= 2;
+	}
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Box")
+        {
+			myAnim.SetBool("pushingBox", true);
+        }
+    }
+
+	public void OnTriggerExit2D(Collider2D collision)
+	{
+		if (collision.gameObject.tag == "Box")
+		{
+			myAnim.SetBool("pushingBox", false);
+		}
 	}
 }
