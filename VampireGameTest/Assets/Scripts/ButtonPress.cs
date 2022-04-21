@@ -5,6 +5,7 @@ using UnityEngine;
 public class ButtonPress : MonoBehaviour
 {
     public GameObject removeLight;
+    public GameObject moveLight;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,7 @@ public class ButtonPress : MonoBehaviour
         if (collision.gameObject.tag == "Box")
         {
             removeLight.SetActive(false);
+            moveLight.transform.position = new Vector3(-1.3f, 9.59f, 0);
         }
     }
 
@@ -30,7 +32,8 @@ public class ButtonPress : MonoBehaviour
     {
         if (collision.gameObject.tag == "Box")
         {
-            removeLight.SetActive(true);
+           removeLight.SetActive(true);
+            moveLight.transform.position = new Vector3(-1.3f, 9.59f, 0);
         }
     }
 }
