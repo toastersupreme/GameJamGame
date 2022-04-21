@@ -7,10 +7,11 @@ public class ButtonPress : MonoBehaviour
     public GameObject removeLight;
     public GameObject moveLight;
 
+    public GameObject removeObject;
+
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -24,6 +25,7 @@ public class ButtonPress : MonoBehaviour
         if (collision.gameObject.tag == "Box")
         {
             removeLight.SetActive(false);
+            removeObject.SetActive(false);
             moveLight.transform.position = new Vector3(-1.3f, 9.59f, 0);
         }
     }
