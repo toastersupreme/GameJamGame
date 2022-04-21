@@ -9,6 +9,9 @@ public class PlayerHealth : MonoBehaviour
     public GameObject spawn;
     public float exposureNum;
     public AudioSource exposedLight;
+
+    public float maxExposure;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +23,7 @@ public class PlayerHealth : MonoBehaviour
     {
         exposureLevel.text = exposureNum.ToString();
 
-        if (exposureNum > 1000)
+        if (exposureNum > maxExposure)
         {
             KillPlayer();
         }
