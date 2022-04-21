@@ -6,6 +6,7 @@ public class ButtonPressPlayer : MonoBehaviour
 {
     public GameObject platformOn;
     public GameObject platformOff;
+    public AudioSource hitButton;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,7 @@ public class ButtonPressPlayer : MonoBehaviour
         {
             platformOn.SetActive(true);
             platformOff.SetActive(false);
+            hitButton.Play();
         }
     }
 
