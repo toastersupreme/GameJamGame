@@ -22,7 +22,7 @@ public class BoxScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "KillArea")
+        if (collision.gameObject.tag == "KillArea2")
         {
             KillBox();
         }
@@ -30,7 +30,7 @@ public class BoxScript : MonoBehaviour
 
     private void KillBox()
     {
-        //Destroy(gameObject);
+        Destroy(gameObject);
         //Instantiate(box, boxSpawn);
         this.transform.position = boxSpawn.transform.position;
         rb.velocity = new Vector2(0, 0);
