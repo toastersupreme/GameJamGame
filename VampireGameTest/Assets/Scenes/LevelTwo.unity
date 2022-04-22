@@ -448,8 +448,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 79399773}
   m_LocalRotation: {x: -0, y: -0, z: 0.73436457, w: 0.6787552}
-  m_LocalPosition: {x: -15.36, y: -1.99, z: 0}
-  m_LocalScale: {x: 5.384385, y: 7.736357, z: 8.4848}
+  m_LocalPosition: {x: -14.1323, y: -1.9504, z: 0}
+  m_LocalScale: {x: 5.4446898, y: 8.803201, z: 8.4848}
   m_Children: []
   m_Father: {fileID: 2126547349}
   m_RootOrder: 0
@@ -4142,14 +4142,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 893178826}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 746d8ed2fd9fa89419b4a1edd34b59ec, type: 3}
+  m_Script: {fileID: 11500000, guid: 63137ca3a9fe7a04d8188e6fce3254f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  removeLight: {fileID: 0}
-  moveLight: {fileID: 0}
-  removeObject: {fileID: 0}
+  book: {fileID: 0}
   Switch: {fileID: 1371601754}
-  onlyIfPressed: 0
 --- !u!1 &895476825
 GameObject:
   m_ObjectHideFlags: 0
@@ -7153,6 +7150,7 @@ GameObject:
   - component: {fileID: 1482740368}
   - component: {fileID: 1482740367}
   - component: {fileID: 1482740369}
+  - component: {fileID: 1482740370}
   m_Layer: 6
   m_Name: Book
   m_TagString: Untagged
@@ -7291,6 +7289,25 @@ PolygonCollider2D:
       - {x: -0.935, y: -1.63}
       - {x: -0.545, y: -1.25}
       - {x: 0.45499998, y: -0.24}
+--- !u!95 &1482740370
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482740366}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9451d0ce7c2056444a61f93ed01b12c6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1496338127
 GameObject:
   m_ObjectHideFlags: 0
@@ -8646,7 +8663,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0.5660378, g: 0.33029932, b: 0.17354932, a: 1}
   m_FlipX: 0
