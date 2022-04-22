@@ -580,7 +580,7 @@ GameObject:
   m_Component:
   - component: {fileID: 215769911}
   - component: {fileID: 215769910}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Set3_13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2608,6 +2608,7 @@ MonoBehaviour:
   moveLight: {fileID: 0}
   removeObject: {fileID: 0}
   Switch: {fileID: 0}
+  onlyIfPressed: 0
 --- !u!1 &895476825
 GameObject:
   m_ObjectHideFlags: 0
@@ -2727,7 +2728,7 @@ GameObject:
   m_Component:
   - component: {fileID: 907184841}
   - component: {fileID: 907184840}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Set3_13 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2870,7 +2871,7 @@ GameObject:
   m_Component:
   - component: {fileID: 944255842}
   - component: {fileID: 944255841}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Set3_13 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3592,13 +3593,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1062054888}
-  m_LocalRotation: {x: -0, y: -0, z: -0.99739563, w: 0.072124325}
-  m_LocalPosition: {x: -8.643252, y: 10.750381, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.9982994, w: 0.05829568}
+  m_LocalPosition: {x: -8.643253, y: 10.75038, z: 0}
   m_LocalScale: {x: 0.07177401, y: 7.0838366, z: 7.4702544}
   m_Children: []
   m_Father: {fileID: 83858931}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -171.728}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -173.316}
 --- !u!1 &1087018955
 GameObject:
   m_ObjectHideFlags: 0
@@ -3623,7 +3624,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1087018955}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.68, y: 13.75, z: 0}
+  m_LocalPosition: {x: -11.3, y: 13.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3639,7 +3640,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1171750349}
   - component: {fileID: 1171750348}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Shelf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4027,7 +4028,7 @@ GameObject:
   - component: {fileID: 1329869467}
   - component: {fileID: 1329869466}
   - component: {fileID: 1329869468}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4317,10 +4318,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f07de2b0cecbfe0479fa4c75a7348051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exposureLevel: {fileID: 184679839}
+  fillImage: {fileID: 0}
   spawn: {fileID: 1618015845}
   exposureNum: 0
   exposedLight: {fileID: 0}
+  maxExposure: 0
 --- !u!114 &1383588326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4613,13 +4615,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1415304938}
-  m_LocalRotation: {x: -0, y: -0, z: -0.99789137, w: -0.06490733}
-  m_LocalPosition: {x: 8.982919, y: 10.950949, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.9982234, w: -0.059582923}
+  m_LocalPosition: {x: 8.982924, y: 10.950948, z: 0}
   m_LocalScale: {x: 0.07175134, y: 7.0862617, z: 7.4702544}
   m_Children: []
   m_Father: {fileID: 83858931}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -187.443}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -186.832}
 --- !u!1 &1482740366
 GameObject:
   m_ObjectHideFlags: 0
@@ -4631,7 +4633,7 @@ GameObject:
   - component: {fileID: 1482740368}
   - component: {fileID: 1482740367}
   - component: {fileID: 1482740369}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Book
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4769,7 +4771,7 @@ GameObject:
   - component: {fileID: 1639444827}
   - component: {fileID: 1639444826}
   - component: {fileID: 1639444828}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Nightstand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5234,7 +5236,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1927124100}
   - component: {fileID: 1927124099}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Set3_13 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5699,7 +5701,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2116219259}
   - component: {fileID: 2116219258}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Set3_13 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
