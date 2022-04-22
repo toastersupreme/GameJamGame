@@ -30,8 +30,8 @@ public class BoxScript : MonoBehaviour
 
     private void KillBox()
     {
-        Destroy(gameObject);
-        Instantiate(box, boxSpawn.transform);
+        //Destroy(gameObject);
+        //Instantiate(box, boxSpawn.transform);
         this.transform.position = boxSpawn.transform.position;
         rb.velocity = new Vector2(0, 0);
     }
