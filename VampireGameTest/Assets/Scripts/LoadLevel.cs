@@ -5,14 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class LoadLevel : MonoBehaviour
 {
-    void OnTriggerEnter2d(Collider other)
+    void OnCollisionEnter2D(Collision2D col)
     {
-        if (other.transform.root.CompareTag("Player"))
+        if (col.transform.tag == "Player")
         {
             SceneManager.LoadScene("LevelTwo");
-          
         }
     }
 }
+
 
   
