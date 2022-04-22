@@ -11,6 +11,8 @@ public class ButtonPress : MonoBehaviour
 
     public AudioSource Switch;
 
+    public bool onlyIfPressed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,8 +39,11 @@ public class ButtonPress : MonoBehaviour
     {
         if (collision.gameObject.tag == "Box")
         {
-           removeLight.SetActive(true);
-            moveLight.transform.position = new Vector3(-1.3f, 9.59f, 0);
+            if (onlyIfPressed)
+            {
+                removeLight.SetActive(true);
+                moveLight.transform.position = new Vector3(-1.3f, 9.59f, 0);
+            }
         }
     }
 }

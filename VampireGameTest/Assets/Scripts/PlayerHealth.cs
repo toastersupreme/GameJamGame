@@ -2,13 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public TextMeshProUGUI exposureLevel;
+    public Image fillImage;
     public GameObject spawn;
     public float exposureNum;
     public AudioSource exposedLight;
+
+    public float maxExposure;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,9 +22,8 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        exposureLevel.text = exposureNum.ToString();
-
-        if (exposureNum > 1000)
+        fillImage.fillAmount = exposureNum / maxExposure;
+        if (exposureNum > maxExposure)
         {
             KillPlayer();
         }
